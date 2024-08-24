@@ -58,7 +58,7 @@ function App() {
         <CoreConcept
         title="Components"
         description="The UI core components"
-        img={stateMgmtImg}
+        img={stateMgmtImg }
         />
 
         </ul>
