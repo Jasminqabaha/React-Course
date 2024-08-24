@@ -1,8 +1,5 @@
 import headerImg from "../src/assets/react-core-concepts.png"
-import componentImg from "../src/assets/components.png"
-import configImg from "../src/assets/config.png"
-import jsxuiImg from "../src/assets/jsx-ui.png"
-import stateMgmtImg from "../src/assets/state-mgmt.png"
+import {CORE_CONCEPTS} from "../src/data.js"
 
 const reatcDescription=["Fundimental",'Crucle','Core'];
 
@@ -26,7 +23,7 @@ function Header() {
 function CoreConcept(props){
   return(
     <li>
-      <img src={props.img} alt={props.title} />
+      <img src={props.image} alt={props.title} />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
     </li>
@@ -41,25 +38,19 @@ function App() {
         <h2>Core Concepts</h2>
         <ul>
         <CoreConcept  
-        title="Components"
-        description="The UI core components"
-        img={componentImg}
+        title= {CORE_CONCEPTS[0].title}
+        description={CORE_CONCEPTS[0].description}
+        image={CORE_CONCEPTS[0].image}
         />
         <CoreConcept
-        title="Components"
-        description="The UI core components"
-        img={configImg}
+        {...CORE_CONCEPTS[1]}
         />
         <CoreConcept
-        title="Components"
-        description="The UI core components"
-        img={jsxuiImg}
+       {...CORE_CONCEPTS[2]}
         />
         <CoreConcept
-        title="Components"
-        description="The UI core components"
-        img={stateMgmtImg }
-        />
+        {...CORE_CONCEPTS[3]}
+        /> 
 
         </ul>
 
