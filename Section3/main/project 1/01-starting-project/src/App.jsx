@@ -1,7 +1,11 @@
 import {CORE_CONCEPTS} from "../src/data.js"
-import  Header from "./components/Header.jsx"
+import  Header from "../src/components/Header/Header.jsx"
 import CoreConcept from "./components/CoreConcept.jsx"
+import TabButton from "../src/components/TabButton.jsx"
 function App() {
+  function handleSelect(){
+    console.log("hello world---Selected!");
+}
   return (
     <div>
       <Header />
@@ -25,6 +29,16 @@ function App() {
         /> 
 
         </ul>
+
+        </section>
+        <section id="examples">
+        <h2>Examples</h2>
+        <menu>
+          <TabButton onSelect={handleSelect}>Component</TabButton>
+          <TabButton onSelect={handleSelect}>JSX</TabButton>
+          <TabButton onSelect={handleSelect}>Props</TabButton>
+          <TabButton onSelect={handleSelect}>State</TabButton>
+        </menu>
 
         </section>
         

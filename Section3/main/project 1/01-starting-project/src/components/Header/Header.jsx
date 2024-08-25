@@ -1,5 +1,5 @@
-import headerImg from "../assets/react-core-concepts.png"
-
+import headerImg from "../../assets/react-core-concepts.png"
+import "./Header.css"
 const reatcDescription=["Fundimental",'Crucle','Core'];
 
 function getRandom(max){
