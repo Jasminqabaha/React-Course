@@ -1,5 +1,6 @@
 import { useState } from "react";
-export default function Player({name,sympol}){
+export default function Player({initialName,sympol}){
+    const [playerName,setPlayerName]= useState(initialName);
     const [isEditting,setIsEditting]= useState(false);
     function handleEditClick(){
 
@@ -7,10 +8,14 @@ export default function Player({name,sympol}){
             setIsEditting(editting=>!editting)
        
     }
-    let playerName= <span className="player-name">{name}</span>
+    function handleChange(event){
+        setPlayerName(event.target.value);
+
+    }
+    let editablePlayerName= <span className="player-name">{playerName}</span>
     let Button= "Edit"
     if(isEditting){
-        playerName=<input type="text" value={name} required/>
+        editablePlayerName=<input type="text" value={playerName} onChange={handleChange} required/>
         Button= "Save"
     }
    
@@ -18,10 +23,10 @@ export default function Player({name,sympol}){
     return (
     <li>
             <span className="player">
-            {playerName}
+            {editablePlayerName}
             <span className="player-symbol">{sympol}</span>
             </span>
-            <button onClick={()=>handleEditClick()}>{Button}</button>
+            <button onClick={handleEditClick}>{Button}</button>
     </li>
     );
 
