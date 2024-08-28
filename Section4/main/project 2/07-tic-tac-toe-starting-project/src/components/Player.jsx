@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Player({initialName,sympol}){
+export default function Player({initialName,sympol,isActive}){
     const [playerName,setPlayerName]= useState(initialName);
     const [isEditting,setIsEditting]= useState(false);
     function handleEditClick(){
@@ -21,7 +21,7 @@ export default function Player({initialName,sympol}){
    
 
     return (
-    <li>
+    <li className={isActive? 'active': undefined}>
             <span className="player">
             {editablePlayerName}
             <span className="player-symbol">{sympol}</span>
