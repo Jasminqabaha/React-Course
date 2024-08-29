@@ -4,12 +4,26 @@ import GameBoard from "./components/GameBoard.jsx";
 import Log from "./components/Log.jsx";
 import { WINNING_COMBINATIONS } from "./components/winning-combinations.js";
 import GameOver from "./components/gameOver.jsx";
-
-const initialGameBoarder=[
+const PLAYERS= {
+  X: 'Player1',
+  O: 'Player2'
+}
+const INITIAL_GAME_BOARDER=[
   [null,null,null],
   [null,null,null],
   [null,null,null]
 ];
+
+function deriveGameBoard(gameTurns){
+  let gameBoard = [...INITIAL_GAME_BOARDER.map(inner=>[...inner])];
+
+  for(const turn of gameTurns){
+      const {square, player} = turn;
+      const {row,col}= square;
+      gameBoard[row][col]=player;
+  }
+  return gameBoard;
+}
 
 function deriveActivePlayer(gameTurns){
   let currentPlayer='X';
@@ -17,26 +31,8 @@ function deriveActivePlayer(gameTurns){
     currentPlayer='O';
   return currentPlayer;
 }
-
-function App() {
-  const [players, setPlayers] = useState({
-    X: 'Player1',
-    Y: 'Player2'
-  })
-  const [gameTurns,setGameTurns]= useState([]);
-  //const [activePlayer,setActivePlayer]= useState('X');
-
-   const activePlayer=deriveActivePlayer(gameTurns);
-
-  let gameBoard = [...initialGameBoarder.map(inner=>[...inner])];
-
-    for(const turn of gameTurns){
-        const {square, player} = turn;
-        const {row,col}= square;
-        gameBoard[row][col]=player;
-    }
-
- let winner;
+function deriveWinner(gameBoard,players){
+  let winner;
 
   for(const combination of WINNING_COMBINATIONS){
     const firstSquareSympol=gameBoard[combination[0].row][combination[0].column];
@@ -51,6 +47,19 @@ function App() {
     winner = players[firstSquareSympol];
   }
 }
+return winner;
+}
+
+function App() {
+  const [players, setPlayers] = useState(PLAYERS);
+  const [gameTurns,setGameTurns]= useState([]);
+  //const [activePlayer,setActivePlayer]= useState('X');
+
+   const activePlayer=deriveActivePlayer(gameTurns);
+
+  const gameBoard = deriveGameBoard(gameTurns);
+
+const winner= deriveWinner(gameBoard,players);
 const hasDraw = gameTurns.length===9 && !winner;
 
 function handleRematch(){
@@ -82,8 +91,8 @@ function handleRematch(){
      <main>
       <div id="game-container" >
         <ol id="players" className="highlight-player">
-        <Player initialName="Player1" sympol='X' isActive={activePlayer==='X'} onChangeName={handlePlayerNameChange}></Player>
-        <Player initialName="Player2" sympol='O' isActive={activePlayer==='O'} onChangeName={handlePlayerNameChange}></Player>
+        <Player initialName={PLAYERS.X} sympol='X' isActive={activePlayer==='X'} onChangeName={handlePlayerNameChange}></Player>
+        <Player initialName={PLAYERS.O} sympol='O' isActive={activePlayer==='O'} onChangeName={handlePlayerNameChange}></Player>
         </ol>
         {(winner||hasDraw) && <GameOver winner={winner} onRematch={handleRematch} />}
         <GameBoard onSellectSquare={handleSellectSquare} board={gameBoard} />
