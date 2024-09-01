@@ -4,6 +4,9 @@ import { calculateInvestmentResults, formatter } from '../util/investment.js';
 export default function Results({ input }) {
   const results = [];
   calculateInvestmentResults(input, results);
+
+  if(results.length<=0)
+    return <h1 className='center'>please enter bigger number</h1>
   const initialInvestment =
     results[0].valueEndOfYear -
     results[0].interest -
