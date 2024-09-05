@@ -5,9 +5,9 @@ export default function Player() {
   const playerName = useRef();
   const [name,setName]=useState(null);
 
-
   function handelClickButton(){
     setName(playerName.current.value);
+    playerName.current.value = '';
   }
 
   return (
