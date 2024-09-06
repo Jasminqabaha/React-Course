@@ -12,14 +12,17 @@ export default function TimerChallenge({title,targetTime}){
     if(timeInterval<=0)
     {
         clearInterval(timer.current);
-        setTimeInterval(targetTime*1000)
         dialog.current.open();
     }
+
+    function handleReset(){
+        setTimeInterval(targetTime*1000);
+    }
+
     function handleStart(){
         timer.current=setInterval(()=>{
             setTimeInterval(pvetInterval=> pvetInterval-10);
         },10);
-        setStartTimer(true);
     }
 
     function handleEnd(){
@@ -29,7 +32,7 @@ export default function TimerChallenge({title,targetTime}){
 
     return (
         <>
-        <ResultModel ref={dialog} targetTime={targetTime} result={'Lose'}/>
+        <ResultModel ref={dialog} targetTime={targetTime} remainingTime={timeInterval} onReset={handleReset} />
     <section className="challenge">
         <h2>{title}</h2>
         <p className="challenge-time">
