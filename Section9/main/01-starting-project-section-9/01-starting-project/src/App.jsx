@@ -20,6 +20,17 @@ function handleStartAddProject(){
   }
   );
 }
+function handleDeleteProject(){
+  setProjectsState(prev=>
+  {
+    return {
+    ...prev,
+    SelectedProjectId:undefined,
+    projects: prev.projects.filter(project=> project.id !== prev.SelectedProjectId)
+    };
+  }
+  );
+}
 
 function handleSelectProject(id){
   setProjectsState(prev=>
@@ -62,7 +73,7 @@ function handleStartCancleProject(){
   }
 
   const selectedProject = projectsState.projects.find(project=> project.id === projectsState.SelectedProjectId);
-  let content = <SelectedProject project={selectedProject}/>
+  let content = <SelectedProject project={selectedProject} onDelete={handleDeleteProject} />
 if(projectsState.SelectedProjectId===undefined)
   content = <NoProjectSelected onStartedAdding={handleStartAddProject}/>
   else if(projectsState.SelectedProjectId===null)
