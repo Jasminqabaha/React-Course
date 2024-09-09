@@ -20,6 +20,19 @@ function handleStartAddProject(){
   );
 }
 
+function handleStartCancleProject(){
+  setProjectsState(prev=>
+  {
+    return {
+    ...prev,
+    SelectedProjectId:undefined
+    };
+  }
+  );
+}
+
+
+
 
   function handleAddProject(projectData) {
     setProjectsState(prev => {
@@ -30,23 +43,27 @@ function handleStartAddProject(){
   
       return {
         ...prev,
-        projects: [...prev.projects, newProject] 
+        SelectedProjectId: undefined,
+        projects: [...prev.projects, newProject]
       };
     });
   }
-console.log(projectsState);
+
   let content;
 if(projectsState.SelectedProjectId===undefined)
   content = <NoProjectSelected onStartedAdding={handleStartAddProject}/>
   else if(projectsState.SelectedProjectId===null)
-    content = <NewProject  onAdd={handleAddProject} onStartedAdding={handleStartAddProject} />
+    content = <NewProject onCancle={handleStartCancleProject}  onAdd={handleAddProject} />
 
   
   
 
   return (
     <main className="h-screen my-8 flex gap-8">
-      <ProjectsSidebar onStartedAdding={handleStartAddProject} />
+      <ProjectsSidebar 
+      onStartedAdding={handleStartAddProject} 
+      projects={projectsState.projects}
+      />
       {content}
     </main>
   );
