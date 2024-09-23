@@ -4,13 +4,15 @@ import quizCompleted from "../assets/quiz-complete.png"
 import QuestionTimer from "./QuastionTimer.jsx";
 
 export default function Quiz(){
+const [answerState,setAnswerState]= useState('');
 const [userAnswers,setUserAnswers]= useState([]);
-const activeQuastionIndex = userAnswers.length;
+const activeQuastionIndex = answerState === '' ? userAnswers.length : userAnswers.length-1 ;
 
 const quizIsCompleted = QUASTIONS.length == activeQuastionIndex;
 
 const handleSelectAnswer = useCallback(
     function handleSelectAnswer(selectedAnswer){
+        setAnswerState('answered');
     setUserAnswers((prev)=>{
         return [
             ...prev,
@@ -18,7 +20,21 @@ const handleSelectAnswer = useCallback(
         ];
     }
     );
-},[]
+
+    setTimeout(
+        ()=>{
+            if(selectedAnswer===QUASTIONS[activeQuastionIndex].answers[0])
+            {
+                setAnswerState('correct');
+            }
+            else {
+                setAnswerState('wrong');
+            }
+            setTimeout(()=>{
+                setAnswerState('');
+            },2000);
+        },1000);
+},[activeQuastionIndex]
 ); 
 
 const handleSkipAnswer = useCallback(
@@ -51,11 +67,27 @@ return (
         <ul id="answers">
             {shuffledAnswers.map(
                 (answer)=>
-                (
+                {
+                    const isSelected = userAnswers[userAnswers.length - 1] === answer;
+                    let cssClass = '';
+                    if(answerState==='answered' && isSelected)
+                    {
+                        cssClass = 'selected';
+                    }
+                    if((answerState==='correct' || answerState==='wrong') && isSelected)
+                    {
+                        cssClass=answerState;
+                    }
+                    return (
                     <li key={answer} className="answer">
-                        <button onClick={()=>handleSelectAnswer(answer)} >{answer}</button>
+                        <button 
+                        onClick={()=>handleSelectAnswer(answer)} 
+                        className={cssClass}>
+                            {answer}
+                        </button>
                     </li>
-                )
+                    );
+                }
             )}
         </ul>
     </div>
