@@ -4,7 +4,7 @@ A simple and interactive **React** project showcasing the fundamental concepts o
 
 ## 📸 Screenshot
 
-![App Screenshot](./Section3/main/project 1/01-starting-project/src/assets/screenshot.png)
+![App Screenshot](./Section3/main/project%201/01-starting-project/src/assets/screenshot.png)
 
 ## 🚀 Project Overview
 
