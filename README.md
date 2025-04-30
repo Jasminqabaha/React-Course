@@ -19,3 +19,16 @@ It demonstrates:
 - 🔄 Managing dynamic content with **State**
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section3-ReactEssentials-Components-JSX-Props-State-More)
+
+### 📊 Section 5 – React Essentials Practice: Investment Calculator
+
+This project is a practical exercise that applies the **core concepts of React** in a real-world scenario.  
+It demonstrates:
+
+- 🧮 Managing **form inputs** using controlled components
+- 🧠 Using **State** to handle user data and calculations
+- 📤 Passing handlers and values through **Props**
+- 📈 Rendering **dynamic output** in a table format
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-5-react-essentials-practice-project)
+
