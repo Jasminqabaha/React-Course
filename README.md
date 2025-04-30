@@ -18,4 +18,4 @@ It demonstrates:
 - 📦 Passing data through **Props**
 - 🔄 Managing dynamic content with **State**
 
-🔗 [View Branch »](https://github.comJasminqabaha/React-Course/tree/Section3-ReactEssentials-Components-JSX-Props-State-More)
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section3-ReactEssentials-Components-JSX-Props-State-More)
