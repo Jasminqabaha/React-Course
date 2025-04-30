@@ -69,3 +69,16 @@ It demonstrates:
 - 🕹️ Real-time countdown logic and score calculation based on timing accuracy
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-8-working-with-refs-and-portals)
+
+### 🗂️ Section 9 – Practice Project: Project & Task Manager
+
+This project is a mini **project and task management app** that applies the full range of React concepts covered so far.  
+It demonstrates:
+
+- 🧠 Managing complex state with nested structures (projects + tasks)
+- ✍️ Creating, viewing, and deleting tasks and projects (CRUD-style)
+- 🧩 Reusable components, custom modals, and sidebar navigation
+- 🧪 Input validation using refs and imperatively controlled modals
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-9-Practice-Project)
+
