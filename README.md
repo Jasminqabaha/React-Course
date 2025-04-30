@@ -32,6 +32,19 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-5-react-essentials-practice-project)
 
+### 🐛 Section 7 – Debugging React Apps
+
+This project continues from the investment calculator built in [Section 5](https://github.com/Jasminqabaha/React-Course/tree/Section-5-react-essentials-practice-project) and focuses on **debugging and improving** an existing React app.  
+It demonstrates:
+
+- 🧪 Using **React Developer Tools** to inspect props, state, and component trees
+- 🔍 Identifying and fixing **state update issues** and **incorrect logic**
+- 🧹 Refactoring and cleaning up calculation and rendering code
+- 💡 Validating props and improving feedback for user input
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-7-debugging-react-apps)
+
+
 ### 🎨 Section 6 – Styling React Components
 
 This project is a hands-on exercise in **styling React components** using a mix of modern techniques.  
