@@ -32,3 +32,16 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-5-react-essentials-practice-project)
 
+### 🎨 Section 6 – Styling React Components
+
+This project is a hands-on exercise in **styling React components** using a mix of modern techniques.  
+It demonstrates:
+
+- 💅 Styling with **Tailwind CSS** utility classes
+- 🧱 Using **CSS Modules** for locally scoped component styles
+- 🎯 Applying **conditional styling** based on validation states
+- 🧩 Building and styling reusable components like inputs and buttons
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-6-styling-react-components)
+
+
