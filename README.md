@@ -106,3 +106,15 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-11-Handling-Side-Effects-and-Working-with-the-useEffect)
 
+### 🧠 Section 12 – Practice Project: React Quiz App
+
+This project is a fully interactive **React quiz app** that includes timed questions, animated feedback, and a results summary.  
+It demonstrates:
+
+- ⏱️ Using `useEffect` and `setTimeout` for countdowns and transitions
+- 🧪 Tracking correct, incorrect, and skipped answers
+- 🎯 Dynamic rendering based on user interaction and quiz progress
+- 🧩 Modular component design with stateful logic
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-12-practice-project-building-a-Quiz-App)
+
