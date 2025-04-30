@@ -46,7 +46,7 @@ It calculates and displays yearly investment values, interest earned, and total 
 
 ## 📸 Screenshot
 
-![App Screenshot](./Section5/main/project%201/01-starting-project-section-5/01-starting-project/public/screenshot.png)
+![App Screenshot](./Section5/main/project%201/01-starting-project-section-5/01-starting-project/public/section5-screenshot.png)
 
 ---
 
