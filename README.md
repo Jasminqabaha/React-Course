@@ -82,3 +82,14 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-9-Practice-Project)
 
+### 🛒 Section 10 – Context API & useReducer: Shopping Cart
+
+This project is a fully functional shopping cart built with React to demonstrate how to manage shared state globally using the **Context API** and **`useReducer`**.  
+It demonstrates:
+
+- 🧠 Centralized state management for a cart using `useReducer`
+- 🔄 Passing state and actions via the Context API
+- 🛍️ Adding, removing, and updating cart items dynamically
+- 📦 Rendering modals using `createPortal`
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-10-Reacts-context-API-and-userReducer)
