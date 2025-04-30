@@ -45,3 +45,14 @@ It demonstrates:
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-6-styling-react-components)
 
 
+### ⏱️ Section 8 – Working with Refs & Portals
+
+This project is a fun timer challenge app built to practice advanced React concepts like **Refs**, **Imperative Handles**, and **Portals**.  
+It demonstrates:
+
+- 🎯 Using `useRef()` to control DOM elements and timers
+- 🧠 Exposing custom methods with `useImperativeHandle()`
+- 🌀 Displaying modals using `createPortal()`
+- 🕹️ Real-time countdown logic and score calculation based on timing accuracy
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-8-working-with-refs-and-portals)
