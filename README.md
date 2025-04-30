@@ -93,3 +93,16 @@ It demonstrates:
 - 📦 Rendering modals using `createPortal`
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-10-Reacts-context-API-and-userReducer)
+
+### 🌍 Section 11 – Handling Side Effects with `useEffect`
+
+This project is a location-based **place picker app** that allows users to build a personal list of places they'd like to visit.  
+It demonstrates:
+
+- 📍 Fetching and using **geolocation** data to sort available places
+- 💾 Persisting selections in **localStorage**
+- ⏳ Managing **timers** and auto-confirmation using `useEffect`
+- 🧠 Cleaning up side effects like intervals and timeouts properly
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-11-Handling-Side-Effects-and-Working-with-the-useEffect)
+
