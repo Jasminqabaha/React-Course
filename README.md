@@ -22,6 +22,11 @@ Users can:
 - 📟 Handling timer state and updating UI in real-time
 
 ---
+## 📸 Screenshot
+
+![App Screenshot](./Section8/main/project1/01-starting-project-section-8/01-starting-project/public/screenshot-section8.png)
+
+---
 
 ## 🧩 Components Breakdown
 
