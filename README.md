@@ -17,7 +17,7 @@ Users can:
 
 ## 📸 Screenshot
 
-![App Screenshot](./section4/main/project30%2/07-tic-tac-toe-starting-project/public/screenshot-4.png)
+![App Screenshot](./Section4/main/project%202/07-tic-tac-toe-starting-project/public/screenshot-4.png)
 
 ---
 
