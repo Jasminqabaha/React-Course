@@ -20,6 +20,19 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section3-ReactEssentials-Components-JSX-Props-State-More)
 
+### 🎮 Section 4 – React Essentials Deep Dive: Tic Tac Toe Game
+
+This project is a classic **Tic Tac Toe game** built in React to deepen understanding of state, props, and component interactions.  
+It demonstrates:
+
+- 🔁 Deriving and managing dynamic game state
+- 🧍 Editable player names with visual highlights
+- 🎯 Conditional rendering for win/draw detection
+- 📜 A real-time move log for every game turn
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/section-4-react-essentials-deep-dive)
+
+
 ### 📊 Section 5 – React Essentials Practice: Investment Calculator
 
 This project is a practical exercise that applies the **core concepts of React** in a real-world scenario.  
