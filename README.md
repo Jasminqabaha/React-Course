@@ -131,3 +131,14 @@ It demonstrates:
 
 🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-12-practice-project-building-a-Quiz-App)
 
+### ⚙️ Section 13 – Behind the Scenes of React & Optimization Techniques
+
+This project is a configurable **React counter app** built to explore React’s rendering behavior and performance tuning.  
+It demonstrates:
+
+- 🧠 Memoizing expensive calculations with `useMemo`
+- 🔁 Preventing unnecessary re-renders using `useCallback` and `React.memo`
+- 🧩 Structuring reusable components with render tracking
+- 🔍 Logging render behavior to understand component updates
+
+🔗 [View Branch »](https://github.com/Jasminqabaha/React-Course/tree/Section-13-A-look-behind-the-scenes-of-React-and-optimization-techniques)
